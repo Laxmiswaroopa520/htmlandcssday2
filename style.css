@@ -1,0 +1,188 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Navbar */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: sticky;   /* these 3 things are used to sticck the header at the top eventhough we scroll down the website it won't move from that position */
+  top: 0;
+  z-index: 1000;
+  color:brown;
+}
+header .logo {
+  font-size: 24px;
+  font-weight: 700;         /* How bold the text looks */
+  color: brown;
+}
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+header nav ul li a {
+  font-weight: 500;
+}
+.btn {
+  background: rgb(190, 86, 86);
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+  transition: background 0.3s;
+  
+}
+.btn:hover {            /* that background color comes when you move the mouse */ /*hover is a psuedo-class */
+  background: brown;
+}
+
+/* Hero */
+.hero {
+    height:80vh;  /* 80% of view port height */
+ background: url('images/herobackground.png');
+background-size:cover;          /* the image  completely covers the whole section */
+background-repeat:no-repeat;
+background-position: center;   /*mandatory because we need to get the complete image in a perfect way */
+
+color:rgb(128, 55, 55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+ position: relative; 
+
+}
+
+.hero::after {          /* child classs same fit for hero also but here we added some kind of blackish background for that iamge */
+  content: '';
+  position: absolute;
+  inset: 0;    /* top:0,bottom:0,right:0,left:0 means exactly fit into the hero section */
+  background: rgba(0,0,0,0.1);
+}
+
+.hero-text {     /* that main heading content inside hero section we have div class */
+  
+  position: relative;
+  z-index: 1;
+}
+.hero h1 {
+  font-size: 3rem;
+}
+.hero p {
+  margin: 1rem 0;
+  font-size: 1.2rem;
+}
+
+/* Sections */
+section {
+  padding: 4rem 10%;
+  text-align: center;
+}
+.collections .grid, .products .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.card img, .product-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+.card h3, .product-card h3 {
+  margin-top: 0.8rem;
+}
+
+/* Product Cards */
+.product-card {
+  background: #fafafa;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s;  
+}
+/*.product-card:hover {
+  transform: translateY(-5px);
+}*/
+
+/* About */
+.about{
+    margin-bottom: 20px;
+}
+.about p {
+  max-width: 700px;
+  margin: auto;
+  font-size: 1.1rem;
+}
+.about h2{
+    align-content: center;
+}
+
+/* Contact*/
+.contactttt{
+    margin-bottom:20px;
+}
+
+.contactttt p{
+    max-width: 700px;
+  margin: auto;
+  font-size: 1.1rem;
+}
+
+/* Newsletter */
+.newsletter{
+    margin-bottom: 20px;
+}
+.newsletter form {
+  margin-top: 1rem;
+  display: flex;  /* display contents side by sie*/
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 20px;
+}
+.newsletter input {
+  padding: 0.6rem;
+  width: 250px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.newsletter button {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  background:rgb(190, 86, 86);
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+
+
+}
+.newsletter button:hover {
+  background: rgb(128, 55, 55);
+}
+
+/* Footer */
+footer {
+  background: #111;
+  color: #eee;
+  text-align: center;
+  padding: 1.5rem;
+}
+footer .socials {
+  margin-top: 0.5rem;
+}
+footer .socials a {
+  color: rgb(128, 55, 55);
+  margin: 0 0.5rem;
+}

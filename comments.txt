@@ -1,0 +1,56 @@
+Header part:
+
+
+
+1.display-flex: align elements in a horizontal way.
+2.justify-content: space-between; Pushes child elements (logo and navigation) to opposite sides (left & right).
+3.list-style:none;  /* remove bulletin points because we have used ul */
+4.box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+0 → offset-x = 0 → shadow is centered horizontally (no left/right shift).
+
+2px → offset-y = 2px → shadow moves 2px downward (below the element).
+
+5px → blur-radius = 5px → edges are blurred by 5px → soft look.
+
+rgba(0,0,0,0.1) → shadow color = black (0,0,0) with 10% opacity.
+
+rgba = red, green, blue, alpha (alpha = transparency).
+
+0.1 means very light, subtle shadow.
+
+
+5.position: sticky; → Makes the header stick to the top of the page when scrolling.
+
+6.top: 0; → Ensures it sticks at the very top.
+
+7.z-index: 1000; → Keeps the header above other elements (so it doesn’t get hidden when scrolling).
+
+
+
+// SECTION part
+
+1.<section> defines a thematic grouping of content.
+
+Used when you want to group content that has a logical meaning or theme.
+
+
+
+//grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+This line controls how many columns appear.
+
+repeat(...) → Tells the browser how many columns to repeat.
+
+auto-fit → Automatically fits as many columns as possible in the available space.
+
+minmax(250px, 1fr) → Each column must be at least 250px wide, but can grow up to fill available space (1fr).
+
+👉 Effect:
+
+On a big screen: multiple columns (3–4 cards in a row).
+
+On a tablet/smaller screen: fewer columns (maybe 2 cards in a row).
+
+On a mobile screen: 1 column (cards stacked vertically).
+
+This makes your layout responsive without writing extra media queries.

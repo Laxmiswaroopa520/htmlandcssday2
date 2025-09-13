@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Men’s Collections</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fafafa;
+    }
+
+    h2 {
+      text-align: center;
+      margin: 2rem 0 1rem;
+      color: #333;
+    }
+
+    .section {
+      padding: 1rem 5%;
+    }
+
+    .grid {
+      display: grid;            /*changes div tag container to grid */
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));     /*This line controls how many columns appear.*/
+      gap: 1.5rem;                  /*Adds spacing between rows and columns in the grid (like margin, but inside the grid).
+                        Keeps cards evenly spaced and neat.  */
+    }
+
+    .card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
+      padding: 1rem;
+      transition: transform 0.3s;
+    }
+
+    .card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);    /* vertical move */
+    }
+
+    .card h3 {
+      margin-top: 0.75rem;
+      color: #444;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Section 1 -->
+  <section class="section">
+    <h2>Formal Wear</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf" alt="Suit 1">
+        <h3>Classic Suit</h3>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518" alt="Suit 2">
+        <h3>Business Look</h3>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb" alt="Suit 3">
+        <h3>Elegant Style</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2 -->
+  <section class="section">
+    <h2>Casual Wear</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1520975869010-6d81a3b5c9a7" alt="Casual 1">
+        <h3>Denim Shirt</h3>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1521334884684-d80222895322" alt="Casual 2">
+        <h3>Everyday Look</h3>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1516822003754-cca485356ecb" alt="Casual 3">
+        <h3>Relaxed Fit</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3 -->
+  <section class="section">
+    <h2>Ethnic Wear</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="images/ethnicwear1.jpg" alt="Ethnic 1">
+        <h3>Kurta Style</h3>
+      </div>
+      <div class="card">
+        <img src="images/ethnicwear2.jpg" alt="Ethnic 2">
+        <h3>Traditional Attire</h3>
+      </div>
+      <div class="card">
+        <img src="images/ethnicwear3.jpg" alt="Ethnic 3">
+        <h3>Festive Look</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4 -->
+  <section class="section">
+    <h2>Sports Wear</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="images/sport3.jpg" alt="Sports 1">
+        <h3>Running Outfit</h3>
+      </div>
+      <div class="card">
+        <img src="images/sportmen2.jpg" alt="Sports 2">
+        <h3>Gym Wear</h3>
+      </div>
+      <div class="card">
+        <img src="images/sport2.jpg" alt="Sports 3">
+        <h3>Active Style</h3>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

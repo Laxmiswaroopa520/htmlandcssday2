@@ -2,13 +2,14 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: border-box;   /*keeps layouts neat */
   font-family: sans-serif;
 }
 
+
 a {
   text-decoration: none;
-  color: inherit;
+  color: brown;
 }
 
 /* Navbar */
@@ -16,68 +17,86 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 5%;
+  padding: 1rem 5%;  /* top -bottom and left-right*/
   background: white;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);/* horizontal vertical blur color*/
   position: sticky;   /* these 3 things are used to sticck the header at the top eventhough we scroll down the website it won't move from that position */
-  top: 0;
-  z-index: 1000;
+  top: 0;       /* sticks at very top */
+  z-index: 1000;    /* higher the value higher the priority */
   color:brown;
 }
+
+
 header .logo {
   font-size: 24px;
   font-weight: 700;         /* How bold the text looks */
   color: brown;
 }
 header nav ul {
-  list-style: none;
+  list-style: none;       /* remove dots before for unordered lists*/
   display: flex;
   gap: 1.5rem;
 }
+
 header nav ul li a {
   font-weight: 500;
 }
-.btn {
+.btn {      /*shop now */
   background: rgb(190, 86, 86);
   color: white;
-  padding: 0.6rem 1.2rem;
-  border-radius: 4px;
-  transition: background 0.3s;
-  
+  padding: 0.6rem 1.2rem;   /*top-bottom left-right*/ /*Here rem means root em → relative to the font-size of the <html> element (commonly 16px).
+                                0.6rem ≈ 9.6px (if root font-size is 16px).
+                            */
+ border-radius: 4px;  /* rounds the corners of the button slightly (4px radius) */
+display: inline-block;    /*/* allows the button to have padding and width,  but still sit inline with text or other inline elements */
 }
+ 
 .btn:hover {            /* that background color comes when you move the mouse */ /*hover is a psuedo-class */
   background: brown;
 }
+ 
+
 
 /* Hero */
-.hero {
-    height:80vh;  /* 80% of view port height */
- background: url('images/herobackground.png');
+.hero{
+height:80vh;  /* 80% of view port height */
+ background: url('images/herobackground.png') ;
 background-size:cover;          /* the image  completely covers the whole section */
 background-repeat:no-repeat;
 background-position: center;   /*mandatory because we need to get the complete image in a perfect way */
-
-color:rgb(128, 55, 55);
+ 
+  color:rgb(128, 55, 55);
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
- position: relative; 
-
+ position: relative;
+ 
 }
 
+.hero h1{
+  color :rgb(128, 55, 55);   /* heading color*/
+}
+ 
+.hero p{
+    color:rgb(128, 55, 55); /* color for below elevate content*/
+}
 .hero::after {          /* child classs same fit for hero also but here we added some kind of blackish background for that iamge */
   content: '';
   position: absolute;
   inset: 0;    /* top:0,bottom:0,right:0,left:0 means exactly fit into the hero section */
   background: rgba(0,0,0,0.1);
 }
+ 
 
-.hero-text {     /* that main heading content inside hero section we have div class */
-  
+
+.hero-text {    /* that main heading content inside hero section we have div class */
   position: relative;
   z-index: 1;
+  color: white; /* makes text visible over dark overlay */
 }
+
+
 .hero h1 {
   font-size: 3rem;
 }
@@ -86,6 +105,9 @@ color:rgb(128, 55, 55);
   font-size: 1.2rem;
 }
 
+
+
+
 /* Sections */
 section {
   padding: 4rem 10%;
@@ -93,14 +115,21 @@ section {
 }
 .collections .grid, .products .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));   /*1fr (fraction of available space*/
+  gap: 2rem;  /*Adds space between grid items (both rows and columns).*/
   margin-top: 2rem;
 }
+
+
+
 .card img, .product-card img {
   width: 100%;
+  height: 250px;         /* fixes uneven height */
+  object-fit: cover;     /* crops image nicely */
   border-radius: 8px;
+  display: block;        /* removes inline spacing */
 }
+ 
 .card h3, .product-card h3 {
   margin-top: 0.8rem;
 }
@@ -116,11 +145,14 @@ section {
 /*.product-card:hover {
   transform: translateY(-5px);
 }*/
-
+ 
 /* About */
 .about{
     margin-bottom: 20px;
 }
+
+ 
+
 .about p {
   max-width: 700px;
   margin: auto;
@@ -129,14 +161,15 @@ section {
 .about h2{
     align-content: center;
 }
-
+ 
 /* Contact*/
 .contactttt{
     margin-bottom:20px;
 }
 
-.contactttt p{
-    max-width: 700px;
+
+.contactttt p {
+  max-width: 700px;
   margin: auto;
   font-size: 1.1rem;
 }
@@ -152,6 +185,9 @@ section {
   gap: 0.5rem;
   margin-bottom: 20px;
 }
+
+
+
 .newsletter input {
   padding: 0.6rem;
   width: 250px;
@@ -161,12 +197,10 @@ section {
 .newsletter button {
   padding: 0.6rem 1.2rem;
   border: none;
-  background:rgb(190, 86, 86);
+  background: rgb(190, 86, 86);
   color: white;
   border-radius: 4px;
   cursor: pointer;
-
-
 }
 .newsletter button:hover {
   background: rgb(128, 55, 55);
@@ -183,6 +217,9 @@ footer .socials {
   margin-top: 0.5rem;
 }
 footer .socials a {
-  color: rgb(128, 55, 55);
+  color: rgb(190, 86, 86);
   margin: 0 0.5rem;
 }
+
+
+
